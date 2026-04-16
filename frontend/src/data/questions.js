@@ -1,0 +1,152 @@
+export const ROLES = [
+  {
+    id: 'frontend',
+    label: 'Frontend',
+    icon: '◈',
+    color: '#7c6ef5',
+    colorDim: 'rgba(124,110,245,0.12)',
+    description: 'React, CSS, JavaScript, Performance, Browser APIs',
+    level: 'Mid–Senior',
+    duration: '~15 min',
+  },
+  {
+    id: 'backend',
+    label: 'Backend',
+    icon: '⬡',
+    color: '#00d4aa',
+    colorDim: 'rgba(0,212,170,0.12)',
+    description: 'APIs, Databases, Architecture, System Design, Security',
+    level: 'Mid–Senior',
+    duration: '~15 min',
+  },
+  {
+    id: 'ai',
+    label: 'AI / ML',
+    icon: '✦',
+    color: '#f5a623',
+    colorDim: 'rgba(245,166,35,0.12)',
+    description: 'Machine Learning, NLP, Model Evaluation, MLOps',
+    level: 'Mid–Senior',
+    duration: '~15 min',
+  },
+];
+
+export const QUESTIONS = {
+  frontend: [
+    {
+      id: 'fe_1',
+      question: 'Explain the difference between `null` and `undefined` in JavaScript, and when you would intentionally use each.',
+      hint: 'Think about type coercion, typeof behavior, and practical usage patterns.',
+      category: 'JavaScript',
+      difficulty: 'Easy',
+    },
+    {
+      id: 'fe_2',
+      question: 'How does the React reconciliation algorithm (Virtual DOM diffing) work, and how does `key` affect it?',
+      hint: 'Discuss the tree-diffing heuristics, component identity, and why keys should be stable.',
+      category: 'React',
+      difficulty: 'Medium',
+    },
+    {
+      id: 'fe_3',
+      question: 'Describe the Critical Rendering Path and three concrete techniques to optimize Time to Interactive.',
+      hint: 'Cover parsing, layout, paint, compositing — then discuss resource hints, code splitting, lazy loading.',
+      category: 'Performance',
+      difficulty: 'Hard',
+    },
+    {
+      id: 'fe_4',
+      question: 'What is CSS Specificity? Walk through how the browser resolves conflicts between these selectors: `.card > p`, `#hero p`, and `p[data-theme]`.',
+      hint: 'Use the (inline, ID, class/attr, element) tuple model to reason through each.',
+      category: 'CSS',
+      difficulty: 'Medium',
+    },
+    {
+      id: 'fe_5',
+      question: 'You notice a React component re-rendering 60+ times per second. Walk through your debugging process and the tools/techniques you would use.',
+      hint: 'Mention React DevTools Profiler, useMemo, useCallback, state colocation, and render tracking.',
+      category: 'Debugging',
+      difficulty: 'Hard',
+    },
+  ],
+  backend: [
+    {
+      id: 'be_1',
+      question: 'Compare SQL and NoSQL databases. For a social media platform with 10M+ users, which would you choose and why?',
+      hint: 'Discuss ACID vs BASE, scalability patterns, read/write ratios, and schema flexibility.',
+      category: 'Databases',
+      difficulty: 'Medium',
+    },
+    {
+      id: 'be_2',
+      question: 'Explain REST vs GraphQL. What are the real trade-offs, and when does GraphQL introduce more problems than it solves?',
+      hint: 'Cover over-fetching, N+1 queries, caching complexity, schema management, and team skill requirements.',
+      category: 'API Design',
+      difficulty: 'Medium',
+    },
+    {
+      id: 'be_3',
+      question: 'A user reports their password was reset without their knowledge. Describe your incident response and how you would prevent this class of vulnerability.',
+      hint: 'Think: account takeover flows, CSRF, email token security, rate limiting, audit logs.',
+      category: 'Security',
+      difficulty: 'Hard',
+    },
+    {
+      id: 'be_4',
+      question: 'Design the data model and API for a distributed rate limiter that works across multiple server instances.',
+      hint: 'Consider token bucket vs sliding window, Redis, race conditions, and failure modes.',
+      category: 'System Design',
+      difficulty: 'Hard',
+    },
+    {
+      id: 'be_5',
+      question: 'What happens inside a database when you run a transaction? Explain isolation levels and give a real-world example of a phantom read.',
+      hint: 'Cover MVCC, locks, READ COMMITTED vs REPEATABLE READ, and serializable isolation.',
+      category: 'Databases',
+      difficulty: 'Hard',
+    },
+  ],
+  ai: [
+    {
+      id: 'ai_1',
+      question: 'Explain the bias-variance tradeoff. How do you diagnose which problem your model has, and what are your remedies for each?',
+      hint: 'Use learning curves, validation metrics, and connect to regularization, ensembling, and data augmentation.',
+      category: 'ML Theory',
+      difficulty: 'Medium',
+    },
+    {
+      id: 'ai_2',
+      question: 'You\'ve trained a sentiment classifier with 95% accuracy but stakeholders are unhappy. What metrics would you investigate and why?',
+      hint: 'Precision, recall, F1, AUC-ROC — discuss class imbalance, confusion matrix, and business impact of FP vs FN.',
+      category: 'Evaluation',
+      difficulty: 'Medium',
+    },
+    {
+      id: 'ai_3',
+      question: 'Describe the Transformer architecture. Why did attention mechanisms replace RNNs for sequence modeling?',
+      hint: 'Cover self-attention, positional encoding, parallelization, and the vanishing gradient problem in RNNs.',
+      category: 'Deep Learning',
+      difficulty: 'Hard',
+    },
+    {
+      id: 'ai_4',
+      question: 'Your ML model performs well offline but degrades 2 weeks after deployment. What is happening and how do you build a system to detect and handle this?',
+      hint: 'Data drift, concept drift, distribution shift — monitoring pipelines, retraining triggers, shadow deployment.',
+      category: 'MLOps',
+      difficulty: 'Hard',
+    },
+    {
+      id: 'ai_5',
+      question: 'Explain how you would fine-tune a large language model for a domain-specific task with limited labeled data.',
+      hint: 'Consider few-shot prompting vs LoRA/QLoRA fine-tuning, synthetic data generation, RLHF, and evaluation strategy.',
+      category: 'LLMs',
+      difficulty: 'Hard',
+    },
+  ],
+};
+
+export const DIFFICULTY_COLOR = {
+  Easy:   { color: '#34d399', bg: 'rgba(52,211,153,0.12)' },
+  Medium: { color: '#fbbf24', bg: 'rgba(251,191,36,0.12)' },
+  Hard:   { color: '#f87171', bg: 'rgba(248,113,113,0.12)' },
+};
